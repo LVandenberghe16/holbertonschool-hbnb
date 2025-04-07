@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>HBnB - Détails du logement</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <div class="logo-icon">H</div>
                 <span class="logo-text">HBnB</span>
             </a>
             <nav class="nav-links">
-                <a href="/" class="nav-link">Accueil</a>
+                <a href="index.html" class="nav-link">Accueil</a>
                 <a href="/login.html" class="nav-link" id="login-link">Connexion</a>
                 <button class="nav-link" id="logout-button" style="display: none;">Déconnexion</button>
             </nav>
@@ -23,36 +23,17 @@
 
     <main>
         <div class="place-details" id="place-info">
-            <!-- Place details will be dynamically inserted here -->
+            <!-- Les détails du logement seront insérés ici -->
         </div>
 
         <section class="reviews-section">
-            <h2>Avis des voyageurs</h2>
-
             <div id="add-review-section" class="review-form-container" style="display: none;">
-                <form id="review-form" class="review-form">
-                    <h3>Partagez votre expérience</h3>
-                    <div class="form-group">
-                        <label for="rating">Note</label>
-                        <select id="rating" name="rating" required>
-                            <option value="5">5 - Excellent</option>
-                            <option value="4">4 - Très bien</option>
-                            <option value="3">3 - Bien</option>
-                            <option value="2">2 - Moyen</option>
-                            <option value="1">1 - Décevant</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="review-text">Votre avis</label>
-                        <textarea id="review-text" name="text" required
-                            placeholder="Partagez votre expérience avec les futurs voyageurs..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-review">Publier votre avis</button>
-                </form>
+                <div id="add-review-link"></div>
             </div>
 
+            <h2>Avis des voyageurs</h2>
             <div id="reviews-list" class="reviews-list">
-                <!-- Reviews will be dynamically inserted here -->
+                <!-- Les reviews seront insérées ici -->
             </div>
         </section>
     </main>

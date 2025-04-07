@@ -189,3 +189,5 @@ zope.interface==7.2
 
 #installation de swagger
 flask-swagger-ui==4.11.1
+
+flask_cors==5.0.1

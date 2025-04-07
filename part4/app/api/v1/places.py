@@ -23,7 +23,6 @@ def get_places():
         'latitude': place.latitude,
         'longitude': place.longitude,
         'owner_id': place.owner_id,
-        'created_at': place.created_at.isoformat()
     } for place in places]), 200
 
 @places_bp.route('/places/<place_id>', methods=['GET'])
@@ -40,7 +39,6 @@ def get_place(place_id):
         'latitude': place.latitude,
         'longitude': place.longitude,
         'owner_id': place.owner_id,
-        'created_at': place.created_at.isoformat()
     }), 200
 
 @places_bp.route('/places/<place_id>/reviews', methods=['GET'])
@@ -55,7 +53,6 @@ def get_place_reviews(place_id):
         'text': review.text,
         'rating': review.rating,
         'user_id': review.user_id,
-        'created_at': review.created_at.isoformat()
     } for review in reviews]), 200
 
 @places_bp.route('/places/<place_id>/reviews', methods=['POST'])
@@ -90,5 +87,4 @@ def create_review(place_id):
         'rating': review.rating,
         'user_id': review.user_id,
         'place_id': review.place_id,
-        'created_at': review.created_at.isoformat()
     }), 201
